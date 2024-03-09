@@ -1206,6 +1206,13 @@ p {
 }
 
 /* ===== Team CSS ===== */
+/* Adds centering for elements regardless of how many*/
+.row {
+  display: flex;
+  justify-content: center; /* This will center the children elements */
+  flex-wrap: wrap;
+}
+
 .ud-team {
   padding-top: 120px;
   padding-bottom: 80px;
@@ -1226,16 +1233,28 @@ p {
   width: 170px;
   height: 170px;
   position: relative;
-  margin: 0px auto 25px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  overflow: hidden; /* This is critical to contain the image within a circle */
+  display: flex; /* Ensure flexbox is used for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .ud-single-team .ud-team-image {
   border-radius: 50%;
+  display: flex; /* Ensures that the child img is centered within this div */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Adds an extra layer of protection against spillage */
 }
 
 .ud-single-team .ud-team-image img {
   width: 100%;
+  height: 100%;
   border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .ud-single-team .shape {
