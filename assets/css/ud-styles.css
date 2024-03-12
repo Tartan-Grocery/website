@@ -10,6 +10,14 @@
   --white: #ffffff;
 }
 
+/* :root {
+  --font: "Inter", sans-serif;
+  --body-color: #388E3C;
+  --heading-color: #1B5E20;
+  --primary-color: #66BB6A;
+  --white: #ffffff;
+} */
+
 body {
   font-family: var(--font);
   font-weight: normal;
